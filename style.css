@@ -3,7 +3,7 @@
     /* Dark Mode Colors */
     --primary-color: #944db2;
     --hover-color: #712f8e;
-    --background-color: #121212;
+    --background-color: #222;
     --text-color: #e0e0e0;
     --nav-background-color: #1f1f1f;
     --nav-text-color: #e0e0e0;
@@ -32,17 +32,13 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-main{
-    margin: 0 auto;
-    width: 1000px;
-}
-
 nav {
     background-color: var(--nav-background-color);
     color: var(--nav-text-color);
     padding: 1rem;
     display: flex;
     justify-content: space-around;
+    border-bottom: 0.5px solid #666;
 }
 
 nav a {
@@ -56,6 +52,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
+main{
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+}
+
 section {
     padding: 2rem;
     margin: 1rem;
@@ -63,11 +65,31 @@ section {
     background-color: var(--background-color);
 }
 
+section#home > h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#highlight{
+    background: linear-gradient(45deg, #d95f5f, var(--primary-color), #4ECDC4 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    
+}
+section#home > p{
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 2;
+
+}
+
 h1, h2 {
     color: var(--text-color);
 }
 
-button {
+.btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -77,8 +99,12 @@ button {
     margin-right: 1rem;
     font-size: 1rem;
 }
+.btn-sec{
+    border-bottom: 2px solid var(--primary-color);
+    cursor: pointer;
+}
 
-button:hover {
+.btn:hover {
     background-color: var(--hover-color);
 }
 
