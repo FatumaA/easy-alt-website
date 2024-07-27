@@ -35,10 +35,11 @@ body {
 nav {
     background-color: var(--nav-background-color);
     color: var(--nav-text-color);
-    padding: 1rem;
+    padding: .5rem;
     display: flex;
     justify-content: space-around;
     border-bottom: 0.5px solid #666;
+    height: fit-content;
 }
 
 nav a {
@@ -51,7 +52,11 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
-
+nav div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
 main{
     margin: 0 auto;
     width: 1000px;
