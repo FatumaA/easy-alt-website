@@ -1,6 +1,8 @@
 const htmlElement = document.documentElement;
 const themeSwitch = document.getElementById("theme-switch");
 const themeName = document.getElementById("theme-name");
+const menuIcon = document.querySelector(".menu-icon");
+const navLinks = document.querySelector(".nav-links");
 
 themeSwitch.addEventListener("change", function () {
 	if (this.checked) {
@@ -10,4 +12,9 @@ themeSwitch.addEventListener("change", function () {
 		htmlElement.setAttribute("data-theme", "dark");
 		themeName.innerText = "Dark";
 	}
+});
+
+menuIcon.addEventListener("click", function () {
+	this.classList.toggle("active");
+	navLinks.classList.toggle("show");
 });

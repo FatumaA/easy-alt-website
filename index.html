@@ -16,12 +16,20 @@
 <body>
     <nav>
         <h1>LOGO</h1>
-        <div>
+        <div class="menu-icon"></div>
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="https://github.com/FatumaA/easy-alt" target="_blank">GitHub</a>
             <a href="https://marketplace.visualstudio.com/items?itemName=FatumaA.easy-alt" target="_blank">Install</a>
             <a href="https://github.com/FatumaA/easy-alt/issues/new" target="_blank">Report an Issue</a>
             <a href="#contact">Contact</a>
+            <div id="theme-container-mobile">
+                <label class="switch" title="theme switcher">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-name">Dark</span>
+            </div>
         </div>
         <div id="theme-container">
             <label class="switch" title="theme switcher">
@@ -29,7 +37,6 @@
                 <span class="slider round"></span>
             </label>
             <span id="theme-name">Dark</span>
-
         </div>
 
     </nav>

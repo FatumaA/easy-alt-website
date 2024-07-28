@@ -35,12 +35,22 @@ body {
 nav {
     background-color: var(--nav-background-color);
     color: var(--nav-text-color);
-    padding: .5rem;
+    padding: .5rem 3rem;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 0.5px solid #666;
     height: fit-content;
 }
+
+.menu-icon {
+    display: none;
+}
+
+#theme-container-mobile{
+    display: none;
+}
+
 
 nav a {
     color: var(--nav-text-color);
@@ -197,3 +207,63 @@ footer a:hover {
     border-radius: 50%;
   }
   
+/* responsive */
+@media (max-width: 768px) {
+    /* Show the menu icon on small screens */
+    .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--nav-text-color);
+    }
+
+    .menu-icon.active::before {
+        content: "\2715"; /* Unicode character for "X" */
+        transform: rotate(0deg);
+    }
+
+    /* Hide the menu icon in its inactive state */
+    .menu-icon::before {
+        content: "\2630"; /* Hamburger icon */
+    }
+
+
+/* Transition for the menu icon */
+.menu-icon.active::before {
+    transform: rotate(90deg); /* Optional: rotate to enhance the "X" effect */
+}
+#theme-container{
+    display: none;
+}
+#theme-container-mobile{
+    display: block;
+    margin: 1.5rem;
+}
+.switch{
+    margin-bottom: -10rem;
+}
+    /* Hide the navigation links by default on small screens */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--nav-background-color);
+        border-bottom: 0.5px solid #666;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Show the navigation links when the menu icon is active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
