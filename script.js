@@ -2,6 +2,7 @@ const htmlElement = document.documentElement;
 const themeSwitch = document.getElementById("theme-switch");
 const themeSwitchMobile = document.getElementById("theme-switch-mobile");
 const themeName = document.getElementById("theme-name");
+const themeNameMobile = document.getElementById("theme-name-mobile");
 const menuIcon = document.querySelector(".menu-icon");
 const navLinks = document.querySelector(".nav-links");
 
@@ -18,10 +19,10 @@ themeSwitch.addEventListener("change", function () {
 themeSwitchMobile.addEventListener("change", function () {
 	if (this.checked) {
 		htmlElement.setAttribute("data-theme", "light");
-		themeName.innerText = "Light";
+		themeNameMobile.innerText = "Light";
 	} else {
 		htmlElement.setAttribute("data-theme", "dark");
-		themeName.innerText = "Dark";
+		themeNameMobile.innerText = "Dark";
 	}
 });
 
