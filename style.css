@@ -180,7 +180,9 @@ section#about > p{
 .feature-list li:last-child {
     border-bottom: none;
 }
-
+section#contact {
+    margin-bottom: 6rem;
+}
 
 #contact-desc{
     font-size: 21px;
@@ -188,6 +190,63 @@ section#about > p{
     line-height: 2;
     margin-bottom: 3rem;
 }
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    background-color: rgba(148, 77, 178, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(148, 77, 178, 0.2);
+}
+
+.contact-item p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.contact-link {
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--hover-color);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact-desc {
+        font-size: 1rem;
+    }
+
+    .contact-links {
+        gap: 1rem;
+    }
+} 
 span {
     display: block;
     margin: 0.5rem 0;
@@ -201,8 +260,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-
 
 footer {
     font-size: small;
@@ -403,6 +460,13 @@ footer p {
     
         .feature-list li {
             font-size: 1rem;
+        }
+        #contact-desc {
+            font-size: 1rem;
+        }
+    
+        .contact-links {
+            gap: 1rem;
         }
     
 }
