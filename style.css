@@ -28,7 +28,6 @@ body {
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
     padding: 0;
-    /* width: 1000px; */
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -97,11 +96,11 @@ section#home > p{
     font-size: 28px;
     font-weight: 200;
     line-height: 2;
-
+    margin-bottom: 3rem;
 }
 
-h1, h2 {
-    color: var(--text-color);
+h2 {
+    font-size: 32px;
 }
 
 .btn {
@@ -122,6 +121,59 @@ h1, h2 {
 .btn:hover {
     background-color: var(--hover-color);
 }
+
+section#about > p{
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2;
+    margin-bottom: 3rem;
+
+}
+.points-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust as needed for vertical spacing between rows */
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust as needed for horizontal spacing between cards */
+}
+
+.top-row .card {
+    flex: 1;
+}
+
+.bottom-row .card {
+    flex: 1;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 20px;
+    border: 0.5px solid var(--primary-color);
+    border-image: linear-gradient(45deg, #d95f5f, var(--primary-color), #4ECDC4 ) 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    font-size: 14px;
+}
+
+/* Bento card on hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: none;
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
 
 span {
     display: block;
@@ -265,5 +317,16 @@ footer a:hover {
     .nav-links a {
         margin: 0.5rem 0;
         text-align: center;
+    }
+
+    .points-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .card,
+    .card:nth-child(4),
+    .card:nth-child(5) {
+        grid-column: auto;
+        max-width: 100%;
     }
 }
