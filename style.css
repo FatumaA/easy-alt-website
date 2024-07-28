@@ -42,8 +42,15 @@ nav {
     align-items: center;
     justify-content: space-between;
     border-bottom: 0.03125rem solid #666;
-    height: fit-content;
+    height: 4rem;
 }
+
+#logo {
+    height: 2rem; /* Adjust this value as needed */
+    width: auto;
+    vertical-align: middle;
+}
+
 
 nav a {
     color: var(--nav-text-color);
